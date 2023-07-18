@@ -10,21 +10,22 @@ require "date"
 # puts "hello"
 # p "hello"
 
-def xmas_countdown
+def xmas_countdown(date = Date.today)
   # 1. get todays date
-  today = Date.today
   # 2. Get todays year!
-  year = today.year #=> 2023
+  year = date.year #=> 2023
   # 3. Crete the =xmas date for the same year
   xmas = Date.new(year, 12, 25)
-  if (xmas - today).negative?
+  if (xmas - date).negative?
     xmas = Date.new(year + 1, 12, 25)
   end
   # 3. subtract
-  (xmas - today).to_i
+  (xmas - date).to_i
 end
 
 # days_til_xmas = xmas_countdown
 puts xmas_countdown
 puts xmas_countdown.class == Integer
 puts xmas_countdown == 160
+
+puts xmas_countdown(Date.new(2023, 12, 26))
