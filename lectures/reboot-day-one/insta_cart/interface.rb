@@ -33,25 +33,18 @@ end
 
 user_choice = nil
 while user_choice != 'quit'
-
   puts "Which item? (or 'quit' to checkout)"
   # 5. Get user choice for product
   user_choice = gets.chomp
-
-
     if store_items.key?(user_choice)
-
       cart << user_choice
     else
-
       if user_choice != 'quit'
         puts "Sorry, we don't have #{user_choice} today."
       end
     end
-
-  p cart
+  # p cart
 end
-
 
 # 7. Calculate total price
 # 7.0 intialize a counter
