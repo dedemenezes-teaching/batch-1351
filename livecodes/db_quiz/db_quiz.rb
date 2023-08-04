@@ -1,14 +1,17 @@
 # What’s the SQL query to get books written before 1985?
-
-SELECT * FROM books
-WHERE publishing_year < 1985
+<<~SQL
+  SELECT * FROM books
+  WHERE publishing_year < 1985
+SQL
 
 # What’s the SQL query to get the 3 most recent books written by Jules Verne?
-SELECT * FROM books
-JOIN authors ON books.author_id = authors.id
-WHERE authors.name = 'Jules Verne'
-ORDER BY books.publishing_year DESC
-LIMIT 3
+<<~SQL
+  SELECT * FROM books
+  JOIN authors ON books.author_id = authors.id
+  WHERE authors.name = 'Jules Verne'
+  ORDER BY books.publishing_year DESC
+  LIMIT 3
+SQL
 
 class CreateAuthors < ActiveRecord::Migration[7.0]
   def change
