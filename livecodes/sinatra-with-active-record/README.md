@@ -1,5 +1,11 @@
-## Active Record Sinatra boilerplate
+## SINATRA WEBAPP
 
-Boilerplate for the 03-AR-Database/03-ActiveRecord-Basics/01_sinatra_activerecord livecode.
+1. As an user, I can list all restaurants
+2. As an user, I can see one restaurant details
 
-Please refer to the livecode guidelines to use it.
+First things first:
+1. MODEL
+1.1 create the table
+1.2 create the model
+
+Restaurants -> name, city
